@@ -4,9 +4,7 @@ import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
@@ -34,9 +32,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogUtils.w("----------------------------------------------  " + TAG + "  ----------------------------------------------");
+        LogUtils.w("---------------------------  " + TAG + "  ---------------------------");
         isVisible = true;
-
+        setContentView(getLayoutId());
         ButterKnife.bind(this);
         initView(savedInstanceState);
         initData();
@@ -71,11 +69,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected abstract int getLayoutId();
 
-    public View getLayout() {
-        View v = LayoutInflater.from(this).inflate(getLayoutId(), rootLayout, false);
-        v.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        return v;
-    }
 
     /**
      * 初始化组件
