@@ -27,6 +27,21 @@ public class AIDLActivity extends BaseActivity {
         return R.layout.activity_aidl;
     }
 
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
     @OnClick(R.id.btn_aidl)
     public void btnAidl() {
         Nav.bindAIDLService(this, serviceConnection);

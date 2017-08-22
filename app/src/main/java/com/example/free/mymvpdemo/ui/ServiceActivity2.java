@@ -32,6 +32,21 @@ public class ServiceActivity2 extends BaseActivity {
         return R.layout.activity_service2;
     }
 
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
     @OnClick(R.id.start_service)
     public void startService() {
         Nav.startMyService(ServiceActivity2.this);

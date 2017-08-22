@@ -37,6 +37,21 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
     @OnClick(R.id.button_enter_layout)
     public void enterLayout() {
         startActivity(new Intent(MainActivity.this, MyLayoutActivity.class));

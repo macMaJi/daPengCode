@@ -27,6 +27,16 @@ public class EventBus1 extends BaseActivity {
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
     protected void initData() {
         EventBus.getDefault().register(this);
 

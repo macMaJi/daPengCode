@@ -25,6 +25,16 @@ public class EventBus2 extends BaseActivity {
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
     protected void initData() {
         button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -39,6 +39,16 @@ public class ServiceActivity1 extends BaseActivity {
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
     protected void initData() {
         textView.setText("serviceActivity1");
     }

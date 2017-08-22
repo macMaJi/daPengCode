@@ -12,11 +12,12 @@ import android.widget.Toast;
 
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.adapter.StaggeredHomeAdapter;
+import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StaggeredGridLayoutActivity extends ActionBarActivity
+public class StaggeredGridLayoutActivity extends BaseActivity
 {
 
 	private RecyclerView mRecyclerView;
@@ -24,18 +25,22 @@ public class StaggeredGridLayoutActivity extends ActionBarActivity
 	private StaggeredHomeAdapter mStaggeredHomeAdapter;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_single_recyclerview);
-		mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerview);
+	protected int getLayoutId() {
+		return R.layout.activity_single_recyclerview;
+	}
 
-		initData();
+	@Override
+	protected void initView() {
+		mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerview);
 		mStaggeredHomeAdapter = new StaggeredHomeAdapter(this, mDatas);
 		mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
 		mRecyclerView.setAdapter(mStaggeredHomeAdapter);
 		mRecyclerView.setItemAnimator(new DefaultItemAnimator());  // 设置item动画
 		initEvent();
+	}
+
+	@Override
+	protected void initListener() {
 
 	}
 

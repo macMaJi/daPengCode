@@ -36,6 +36,16 @@ public class HandlerActivity extends BaseActivity {
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
+
+    @Override
     protected void initData() {
 
         //初始化子线程并进行设置好Handler的handleMessage方法

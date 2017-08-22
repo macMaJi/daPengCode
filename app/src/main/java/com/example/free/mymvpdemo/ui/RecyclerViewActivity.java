@@ -12,12 +12,13 @@ import android.widget.Toast;
 
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.adapter.HomeAdapter;
+import com.example.free.mymvpdemo.manager.BaseActivity;
 import com.example.free.mymvpdemo.view.recyclerview.DividerGridItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewActivity extends AppCompatActivity {
+public class RecyclerViewActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private List<String> mDatas;
@@ -31,9 +32,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycler_view);
+    protected int getLayoutId() {
+        return R.layout.activity_recycler_view;
+    }
+
+    @Override
+    protected void initView() {
         mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         changeShowMode = ((Button) findViewById(R.id.button_change));
         initData();
@@ -51,6 +55,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     private void initNormalRecyclerView() {
