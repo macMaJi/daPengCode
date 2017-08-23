@@ -20,4 +20,6 @@ public class MyLayout extends LinearLayout {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         return true;
     }
+
+
 }
