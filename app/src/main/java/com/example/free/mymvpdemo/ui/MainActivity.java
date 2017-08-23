@@ -1,6 +1,7 @@
 package com.example.free.mymvpdemo.ui;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.free.mymvpdemo.R;
@@ -8,6 +9,7 @@ import com.example.free.mymvpdemo.helper.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
@@ -31,6 +33,8 @@ public class MainActivity extends BaseActivity {
     Button jniControl;
     @BindView(R.id.eventBus)
     Button eventBus;
+    @BindView(R.id.nine_patch)
+    Button ninePatch;
 
     @Override
     protected int getLayoutId() {
@@ -95,5 +99,10 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.eventBus)
     public void eventBus() {
         Nav.toEventBusActivity(this);
+    }
+
+    @OnClick(R.id.nine_patch)
+    public void ninePatch() {
+        Nav.toMy9PatchActivity(this);
     }
 }

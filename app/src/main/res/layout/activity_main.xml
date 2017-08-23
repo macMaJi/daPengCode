@@ -57,6 +57,12 @@
         android:text="EventBus"
         android:id="@+id/eventBus"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="9Patch"
+        android:id="@+id/nine_patch"
+        />
 
 </LinearLayout>
 
