@@ -101,10 +101,12 @@
     <orderEntry type="library" exported="" name="gson-2.7" level="project" />
     <orderEntry type="library" exported="" name="eventbus-3.0.0" level="project" />
     <orderEntry type="library" exported="" name="okio-1.11.0" level="project" />
+    <orderEntry type="library" exported="" name="BaseRecyclerViewAdapterHelper-2.9.18" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-media-compat-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="okhttp-3.4.1" level="project" />
+    <orderEntry type="library" exported="" name="EasySwipeMenuLayout-1.1.2" level="project" />
     <orderEntry type="library" exported="" name="butterknife-8.7.0" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="utilcode-1.7.1" level="project" />

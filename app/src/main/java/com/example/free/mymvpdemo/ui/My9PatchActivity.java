@@ -1,9 +1,5 @@
 package com.example.free.mymvpdemo.ui;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.BaseAdapter;
-
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 

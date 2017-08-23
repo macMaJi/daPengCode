@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_change"
         android:text="@string/change_show_mode"
+        android:layout_marginTop="100dp"
         />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"

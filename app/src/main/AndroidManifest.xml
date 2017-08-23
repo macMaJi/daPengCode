@@ -13,11 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
         <!-- activity -->
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,13 +27,19 @@
         <activity android:name=".ui.StaggeredGridLayoutActivity" />
         <activity android:name=".ui.HandlerActivity" />
         <activity android:name=".ui.ServiceActivity1" />
+        <activity android:name=".ui.AIDLActivity" />
+        <activity android:name=".ui.JNIActivity" />
+        <activity android:name=".ui.EventbusActivity" />
+        <activity android:name=".ui.eventbus.EventBus1" />
+        <activity android:name=".ui.eventbus.EventBus2" />
+        <activity android:name=".ui.My9PatchActivity" />
+        <activity android:name=".ui.SwipeRecyclerViewActivity" />
         <activity
             android:name=".ui.ServiceActivity2"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/noAnimationTheme" />
-        <activity android:name=".ui.AIDLActivity" />
-        <activity android:name=".ui.JNIActivity" />
+
 
         <!-- service -->
         <service
@@ -45,16 +51,6 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ui.EventbusActivity" />
-        <activity android:name=".ui.eventbus.EventBus1">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.eventbus.EventBus2"></activity>
-        <activity android:name=".ui.My9PatchActivity"></activity>
     </application>
 
 </manifest>

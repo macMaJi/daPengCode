@@ -35,6 +35,8 @@ public class MainActivity extends BaseActivity {
     Button eventBus;
     @BindView(R.id.nine_patch)
     Button ninePatch;
+    @BindView(R.id.swipe_recyclerview)
+    Button swipeRecyclerview;
 
     @Override
     protected int getLayoutId() {
@@ -71,6 +73,11 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
     }
 
+    @OnClick(R.id.swipe_recyclerview)
+    public void swipenRecyclerView() {
+        startActivity(new Intent(MainActivity.this, SwipeRecyclerViewActivity.class));
+    }
+
     @OnClick(R.id.button_waterfall)
     public void waterFall() {
         startActivity(new Intent(MainActivity.this, StaggeredGridLayoutActivity.class));
@@ -104,5 +111,12 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.nine_patch)
     public void ninePatch() {
         Nav.toMy9PatchActivity(this);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }
