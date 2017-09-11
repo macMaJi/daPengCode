@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.blankj.utilcode.util.LogUtils;
+import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.util.ActivityManager;
 import com.example.free.mymvpdemo.util.HttpUtils.HttpUtils;
 import com.example.free.mymvpdemo.util.UDialog;
@@ -26,12 +27,14 @@ public abstract class BaseActivity extends AppCompatActivity {
     public LinearLayout baseView;
 
     public String TAG = getClass().getSimpleName();
-
+    private LinearLayout mRootView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_base);
+        mRootView = ((LinearLayout) findViewById(R.id.root_view));
         LogUtils.w("---------------------------  " + TAG + "  ---------------------------");
         isVisible = true;
         setContentView(getLayoutId());
@@ -39,6 +42,18 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView(savedInstanceState);
         initData();
         initListener();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            int statusBarHeight1 = -1;
+            //获取status_bar_height资源的ID
+            int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+            if (resourceId > 0) {
+                //根据资源ID获取响应的尺寸值
+                statusBarHeight1 = getResources().getDimensionPixelSize(resourceId);
+            }
+            mRootView.setPadding(0, statusBarHeight1, 0, 0);
+        }
+
         //实现沉浸式功能
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             // 透明状态栏

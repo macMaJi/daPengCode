@@ -37,6 +37,8 @@ public class MainActivity extends BaseActivity {
     Button ninePatch;
     @BindView(R.id.swipe_recyclerview)
     Button swipeRecyclerview;
+    @BindView(R.id.time_util)
+    Button timeUtil;
 
     @Override
     protected int getLayoutId() {
@@ -113,10 +115,8 @@ public class MainActivity extends BaseActivity {
         Nav.toMy9PatchActivity(this);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
+    @OnClick(R.id.time_util)
+    public void timeUtil() {
+        Nav.toTimeActivity(this);
     }
 }

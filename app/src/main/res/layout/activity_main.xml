@@ -69,6 +69,12 @@
         android:text="9Patch"
         android:id="@+id/nine_patch"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时间转换类"
+        android:id="@+id/time_util"
+        />
 
 </LinearLayout>
 

@@ -14,6 +14,7 @@ import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.My9PatchActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
+import com.example.free.mymvpdemo.ui.TimeActivity;
 import com.example.free.mymvpdemo.ui.eventbus.EventBus1;
 import com.example.free.mymvpdemo.ui.eventbus.EventBus2;
 
@@ -76,5 +77,9 @@ public class Nav {
 
     public static void toEventBus2(Activity activity) {
         activity.startActivity(new Intent(activity, EventBus2.class));
+    }
+
+    public static void toTimeActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, TimeActivity.class));
     }
 }
