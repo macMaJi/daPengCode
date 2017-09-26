@@ -14,6 +14,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
 
 
@@ -176,6 +177,7 @@ public class ToneLayer {
      */
     public void setHue(int hue) {
         mHueValue = hue * 1.0F / MIDDLE_VALUE;
+        LogUtils.i("mHueValue, 色度值：" + mHueValue);
     }
 
     /**

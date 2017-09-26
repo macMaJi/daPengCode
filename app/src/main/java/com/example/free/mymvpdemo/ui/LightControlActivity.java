@@ -28,7 +28,7 @@ public class LightControlActivity extends BaseActivity implements SeekBar.OnSeek
 
     @Override
     protected void initView() {
-
+        init();
     }
 
     @Override
@@ -61,13 +61,15 @@ public class LightControlActivity extends BaseActivity implements SeekBar.OnSeek
         int flag = (Integer) seekBar.getTag();
         switch (flag) {
             case ToneLayer.FLAG_SATURATION:
+                LogUtils.i("progress, 饱和度:" + progress);
                 mToneLayer.setSaturation(progress);
                 break;
             case ToneLayer.FLAG_LUM:
+                LogUtils.i("progress, 色相:" + progress);
                 mToneLayer.setLum(progress);
                 break;
             case ToneLayer.FLAG_HUE:
-                LogUtils.i("progress:" + progress);
+                LogUtils.i("progress, 亮度:" + progress);
                 mToneLayer.setHue(progress);
                 break;
         }

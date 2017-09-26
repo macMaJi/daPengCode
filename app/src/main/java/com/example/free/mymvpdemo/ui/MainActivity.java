@@ -124,6 +124,6 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.light_control)
     public void lightControl() {
-
+        Nav.toLightControlActivity(this);
     }
 }

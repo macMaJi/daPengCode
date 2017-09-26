@@ -11,6 +11,7 @@ import com.example.free.mymvpdemo.service.MyService;
 import com.example.free.mymvpdemo.ui.AIDLActivity;
 import com.example.free.mymvpdemo.ui.EventbusActivity;
 import com.example.free.mymvpdemo.ui.JNIActivity;
+import com.example.free.mymvpdemo.ui.LightControlActivity;
 import com.example.free.mymvpdemo.ui.My9PatchActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
@@ -81,5 +82,9 @@ public class Nav {
 
     public static void toTimeActivity(Activity activity) {
         activity.startActivity(new Intent(activity, TimeActivity.class));
+    }
+
+    public static void toLightControlActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, LightControlActivity.class));
     }
 }
