@@ -39,6 +39,8 @@ public class MainActivity extends BaseActivity {
     Button swipeRecyclerview;
     @BindView(R.id.time_util)
     Button timeUtil;
+    @BindView(R.id.light_control)
+    Button lightControl;
 
     @Override
     protected int getLayoutId() {
@@ -118,5 +120,10 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.time_util)
     public void timeUtil() {
         Nav.toTimeActivity(this);
+    }
+
+    @OnClick(R.id.light_control)
+    public void lightControl() {
+
     }
 }

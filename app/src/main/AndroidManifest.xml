@@ -50,7 +50,8 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ui.TimeActivity"></activity>
+        <activity android:name=".ui.TimeActivity" />
+        <activity android:name=".ui.LightControlActivity"></activity>
     </application>
 
 </manifest>

@@ -2,4 +2,8 @@
     <string name="app_name">大鹏</string>
     <string name="change_show_mode">切换显示模式</string>
     <string name="click">点击</string>
+    <string name="saturation">饱和度</string>
+    <string name="contrast">亮度</string>
+    <string name="lightness">色度</string>
+
 </resources>

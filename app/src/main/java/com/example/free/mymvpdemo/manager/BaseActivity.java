@@ -28,6 +28,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public String TAG = getClass().getSimpleName();
     private LinearLayout mRootView;
+    private View mView;
 
 
     @Override
@@ -35,6 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
         mRootView = ((LinearLayout) findViewById(R.id.root_view));
+        mView = findViewById(R.id.titleBar);
         LogUtils.w("---------------------------  " + TAG + "  ---------------------------");
         isVisible = true;
         setContentView(getLayoutId());
@@ -51,7 +53,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 //根据资源ID获取响应的尺寸值
                 statusBarHeight1 = getResources().getDimensionPixelSize(resourceId);
             }
-            mRootView.setPadding(0, statusBarHeight1, 0, 0);
+            mView.setPadding(0, statusBarHeight1, 0, 0);
         }
 
         //实现沉浸式功能

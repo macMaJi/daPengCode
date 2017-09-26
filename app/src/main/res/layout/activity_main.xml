@@ -1,80 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="点击进入MyLayoutActivity"
-        android:id="@+id/button_enter_layout"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="点击进入Picasso"
-        android:id="@+id/button_picasso"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="进入 RecyclerView页面"
-        android:id="@+id/button_recyclerview"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="进入Swipe-RecyclerView"
-        android:id="@+id/swipe_recyclerview"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="点击进入瀑布流"
-        android:id="@+id/button_waterfall"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="handler处理"
-        android:id="@+id/enter_handler"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="service处理"
-        android:id="@+id/serviceControl"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="AIDL"
-        android:id="@+id/aidl_control"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="JNI"
-        android:id="@+id/jni_control"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EventBus"
-        android:id="@+id/eventBus"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="9Patch"
-        android:id="@+id/nine_patch"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="时间转换类"
-        android:id="@+id/time_util"
-        />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_enter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击进入MyLayoutActivity" />
+
+        <Button
+            android:id="@+id/button_picasso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击进入Picasso" />
+
+        <Button
+            android:id="@+id/button_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进入 RecyclerView页面" />
+
+        <Button
+            android:id="@+id/swipe_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进入Swipe-RecyclerView" />
+
+        <Button
+            android:id="@+id/button_waterfall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击进入瀑布流" />
+
+        <Button
+            android:id="@+id/enter_handler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="handler处理" />
+
+        <Button
+            android:id="@+id/serviceControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="service处理" />
+
+        <Button
+            android:id="@+id/aidl_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AIDL" />
+
+        <Button
+            android:id="@+id/jni_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JNI" />
+
+        <Button
+            android:id="@+id/eventBus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus" />
+
+        <Button
+            android:id="@+id/nine_patch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9Patch" />
+
+        <Button
+            android:id="@+id/time_util"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="时间转换类" />
+
+        <Button
+            android:id="@+id/light_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="亮度调节按钮" />
+
+    </LinearLayout>
+
+</ScrollView>
 
