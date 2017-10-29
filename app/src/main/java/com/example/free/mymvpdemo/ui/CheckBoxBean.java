@@ -11,7 +11,7 @@ public class CheckBoxBean {
         this.name = name;
     }
 
-    private int isChecked;
-    private String name;
+    public int isChecked;
+    public String name;
 
 }

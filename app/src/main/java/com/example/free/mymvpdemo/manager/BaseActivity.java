@@ -17,6 +17,7 @@ import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.util.ActivityManager;
 import com.example.free.mymvpdemo.util.HttpUtils.HttpUtils;
 import com.example.free.mymvpdemo.util.UDialog;
+import com.example.free.mymvpdemo.view.TitleBar;
 
 import butterknife.ButterKnife;
 
@@ -29,7 +30,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public String TAG = getClass().getSimpleName();
     private LinearLayout mRootView;
-    private View mTitleBar;
+    private TitleBar mTitleBar;
     private FrameLayout mlayoutView;
 
 
@@ -40,7 +41,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (showTitleBar()) {
             setContentView(R.layout.activity_base);
             mRootView = ((LinearLayout) findViewById(R.id.root_view));
-            mTitleBar = findViewById(R.id.titleBar);
+            mTitleBar = (TitleBar)findViewById(R.id.titleBar);
             mlayoutView = ((FrameLayout) findViewById(R.id.layout_view));
             mlayoutView.addView(getLayout());
 
@@ -87,6 +88,41 @@ public abstract class BaseActivity extends AppCompatActivity {
         return true;
     }
 
+
+    /**
+     * 设置右边按钮
+     *
+     * @param resId
+     */
+    public void setRightBtn(int resId) {
+        if (showTitleBar()) {
+            mTitleBar.setRightBtnVisibility(View.VISIBLE);
+            mTitleBar.setRightBtnIcon(resId);
+        }
+    }
+
+    /**
+     * title右侧按钮点击
+     *
+     * @param leftClick
+     */
+    public void setRightClick(TitleBar.TitleBarRightClick leftClick) {
+        if (showTitleBar()) {
+            mTitleBar.setRightClick(leftClick);
+        }
+    }
+
+    /**
+     * 设置右边按钮
+     *
+     * @param rightText
+     */
+    public void setRightBtn(String rightText) {
+        if (showTitleBar()) {
+            mTitleBar.setRightBtnVisibility(View.VISIBLE);
+            mTitleBar.setRightBtnText(rightText);
+        }
+    }
 
     /**
      * 加载布局文件

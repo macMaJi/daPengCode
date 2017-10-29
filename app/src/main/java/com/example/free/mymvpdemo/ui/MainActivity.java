@@ -134,6 +134,10 @@ public class MainActivity extends BaseActivity {
         Nav.toCheckBoxActivity(this);
     }
 
+    @Override
+    public boolean showTitleBar() {
+        return false;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

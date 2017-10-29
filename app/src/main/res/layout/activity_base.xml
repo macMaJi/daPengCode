@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <View
+
+    <com.example.free.mymvpdemo.view.TitleBar
         android:id="@+id/titleBar"
         android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:background="@color/whole_blue" />
+        android:layout_height="80dp"
+        android:background="@color/whole_blue"
+        app:left_res_id="@drawable/back_btn"
+        app:left_show="true"
+        />
 
     <FrameLayout
         android:id="@+id/layout_view"

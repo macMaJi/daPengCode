@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBar">
+        <attr name="tv_text" format="string" />
+
+        <attr name="left_text" format="string" />
+        <attr name="left_res_id" format="reference|integer" />
+        <attr name="left_show" format="boolean" />
+
+        <attr name="middle_text" format="string" />
+        <attr name="middle_res_id" format="reference|integer" />
+        <attr name="middle_show" format="boolean" />
+
+        <attr name="right_text" format="string" />
+        <attr name="right_res_id" format="reference" />
+        <attr name="right_show" format="boolean" />
+
+        <attr name="title_color" format="color" />
+        <attr name="left_color" format="color" />
+        <attr name="left_bet_title_color" format="color" />
+        <attr name="right_color" format="color" />
+        <attr name="is_iconfont" format="boolean" />
+        <attr name="pull_down_text" format="string" />
+    </declare-styleable>
+</resources>

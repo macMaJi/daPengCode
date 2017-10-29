@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rly_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whole_blue">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:padding="28px"
+            android:text="左"
+            android:gravity="center"
+            android:textColor="@color/pure_white"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:text="中"
+            android:textColor="@color/pure_white"
+            android:textSize="26px"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/btn_left"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLength="40"
+            android:maxWidth="500px"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/pure_white"
+            android:textSize="36px" />
+
+        <TextView
+            android:id="@+id/tv_pull_down"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/sel_up_down"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:textColor="@color/pure_white"
+            android:textSize="36px"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:maxWidth="300px"
+            android:padding="28px"
+            android:singleLine="true"
+            android:text="右"
+            android:gravity="center"
+            android:textColor="@color/pure_white"
+            android:textSize="26px" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,20 +1,23 @@
 package com.example.free.mymvpdemo.ui;
 
-import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
+import com.blankj.utilcode.util.ToastUtils;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.adapter.CheckBoxAdapter;
 import com.example.free.mymvpdemo.manager.BaseActivity;
+import com.example.free.mymvpdemo.view.TitleBar;
 import com.example.free.mymvpdemo.view.recyclerview.DividerGridItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class CheckBoxActivity extends BaseActivity {
 
@@ -23,6 +26,7 @@ public class CheckBoxActivity extends BaseActivity {
     RecyclerView recyclerView;
 
     private CheckBoxAdapter checkBoxAdapter;
+    private List<CheckBoxBean> checkBoxBeanList;
 
     @Override
     protected int getLayoutId() {
@@ -31,27 +35,44 @@ public class CheckBoxActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        setRightBtn("显示和隐藏");
     }
 
     @Override
     protected void initListener() {
+        setRightClick(new TitleBar.TitleBarRightClick() {
+            @Override
+            public void onRightClick(View v) {
+                ToastUtils.showShort("点击了显示");
+                setCheckBoxVisible();
+            }
+        });
 
+        recyclerView.addOnItemTouchListener(new OnItemClickListener() {
+            @Override
+            public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
+                if (checkBoxBeanList.get(position).isChecked == 0) {
+                    checkBoxBeanList.get(position).isChecked = 1;
+                } else {
+                    checkBoxBeanList.get(position).isChecked = 0;
+                }
+                checkBoxAdapter.notifyItemChanged(position);
+            }
+        });
     }
 
     private LinearLayoutManager mLayoutManager;
+
     @Override
     protected void initData() {
-        List<CheckBoxBean> checkBoxBeanList = new ArrayList();
+        checkBoxBeanList = new ArrayList();
         for (int i = 0; i < 30; i++) {
             CheckBoxBean checkBoxBean = new CheckBoxBean(0, "lixiang" + i);
             checkBoxBeanList.add(checkBoxBean);
         }
-
         mLayoutManager = new LinearLayoutManager(this);
         checkBoxAdapter = new CheckBoxAdapter(R.layout.checkbox_item);
         initRecyclerData(mLayoutManager);
-
         checkBoxAdapter.addData(checkBoxBeanList);
     }
 
@@ -62,10 +83,18 @@ public class CheckBoxActivity extends BaseActivity {
         recyclerView.setAdapter(checkBoxAdapter);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
+    private void setCheckBoxVisible() {
+        checkBoxAdapter.setCheckBoxVisibleListener(new CheckBoxAdapter.CheckboxVisibleListener() {
+            @Override
+            public void checkBoxGlobalPosition(boolean isCheckBoxVisible) {
+                if (!isCheckBoxVisible) {
+                    for (CheckBoxBean checkBoxBean : checkBoxBeanList) {
+                        checkBoxBean.isChecked = 0;
+                    }
+                }
+            }
+        });
     }
+
+
 }
