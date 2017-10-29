@@ -1,6 +1,7 @@
 package com.example.free.mymvpdemo.manager;
 
 import android.app.ProgressDialog;
+import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -63,7 +64,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         } else {
             setContentView(getLayoutId());
         }
-
+        ButterKnife.bind(this);
         LogUtils.w("---------------------------  " + TAG + "  ---------------------------");
         isVisible = true;
         initView(savedInstanceState);

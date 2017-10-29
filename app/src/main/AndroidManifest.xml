@@ -51,7 +51,8 @@
             android:exported="true" />
 
         <activity android:name=".ui.TimeActivity" />
-        <activity android:name=".ui.LightControlActivity"></activity>
+        <activity android:name=".ui.LightControlActivity" />
+        <activity android:name=".ui.CheckBoxActivity"></activity>
     </application>
 
 </manifest>

@@ -41,6 +41,8 @@ public class MainActivity extends BaseActivity {
     Button timeUtil;
     @BindView(R.id.light_control)
     Button lightControl;
+    @BindView(R.id.checkbox)
+    Button checkbox;
 
     @Override
     protected int getLayoutId() {
@@ -125,5 +127,17 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.light_control)
     public void lightControl() {
         Nav.toLightControlActivity(this);
+    }
+
+    @OnClick(R.id.checkbox)
+    public void checkbox() {
+        Nav.toCheckBoxActivity(this);
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ButterKnife.bind(this);
     }
 }
