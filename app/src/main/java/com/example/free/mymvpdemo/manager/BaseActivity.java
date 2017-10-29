@@ -4,8 +4,11 @@ import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.blankj.utilcode.util.LogUtils;
@@ -23,44 +26,49 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends AppCompatActivity {
 
 
-    protected LinearLayout rootLayout;//内容载体
-    public LinearLayout baseView;
-
     public String TAG = getClass().getSimpleName();
     private LinearLayout mRootView;
-    private View mView;
+    private View mTitleBar;
+    private FrameLayout mlayoutView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
-        mRootView = ((LinearLayout) findViewById(R.id.root_view));
-        mView = findViewById(R.id.titleBar);
+
+        if (showTitleBar()) {
+            setContentView(R.layout.activity_base);
+            mRootView = ((LinearLayout) findViewById(R.id.root_view));
+            mTitleBar = findViewById(R.id.titleBar);
+            mlayoutView = ((FrameLayout) findViewById(R.id.layout_view));
+            mlayoutView.addView(getLayout());
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                int statusBarHeight1 = -1;
+                //获取status_bar_height资源的ID
+                int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+                if (resourceId > 0) {
+                    //根据资源ID获取响应的尺寸值
+                    statusBarHeight1 = getResources().getDimensionPixelSize(resourceId);
+                }
+                mTitleBar.setPadding(0, statusBarHeight1, 0, 0);
+            }
+
+            //实现沉浸式功能
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                // 透明状态栏
+                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            }
+
+        } else {
+            setContentView(getLayoutId());
+        }
+
         LogUtils.w("---------------------------  " + TAG + "  ---------------------------");
         isVisible = true;
-        setContentView(getLayoutId());
-        ButterKnife.bind(this);
         initView(savedInstanceState);
         initData();
         initListener();
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            int statusBarHeight1 = -1;
-            //获取status_bar_height资源的ID
-            int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-            if (resourceId > 0) {
-                //根据资源ID获取响应的尺寸值
-                statusBarHeight1 = getResources().getDimensionPixelSize(resourceId);
-            }
-            mView.setPadding(0, statusBarHeight1, 0, 0);
-        }
-
-        //实现沉浸式功能
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            // 透明状态栏
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        }
         ActivityManager.getInstance().addActivity(this);
     }
 
@@ -85,6 +93,13 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @return
      */
     protected abstract int getLayoutId();
+
+
+    public View getLayout() {
+        View v = LayoutInflater.from(this).inflate(getLayoutId(), mRootView, false);
+        v.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        return v;
+    }
 
 
     /**
@@ -144,6 +159,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             try {
                 waitDialog.dismiss();
                 waitDialog = null;
+                isVisible =false;
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

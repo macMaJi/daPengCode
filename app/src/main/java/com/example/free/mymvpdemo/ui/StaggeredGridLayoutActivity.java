@@ -30,10 +30,7 @@ public class StaggeredGridLayoutActivity extends BaseActivity
 	@Override
 	protected void initView() {
 		mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerview);
-		mStaggeredHomeAdapter = new StaggeredHomeAdapter(this, mDatas);
-		mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
-		mRecyclerView.setAdapter(mStaggeredHomeAdapter);
-		mRecyclerView.setItemAnimator(new DefaultItemAnimator());  // 设置item动画
+
 		initEvent();
 	}
 
@@ -61,10 +58,14 @@ public class StaggeredGridLayoutActivity extends BaseActivity
 	}
 
 	protected void initData() {
-		mDatas = new ArrayList<String>();
+		mDatas = new ArrayList<>();
 		for (int i = 'A'; i < 'z'; i++) {
 			mDatas.add("" + (char) i);
 		}
+		mStaggeredHomeAdapter = new StaggeredHomeAdapter(this, mDatas);
+		mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
+		mRecyclerView.setAdapter(mStaggeredHomeAdapter);
+		mRecyclerView.setItemAnimator(new DefaultItemAnimator());  // 设置item动画
 	}
 
 	@Override
