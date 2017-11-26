@@ -90,6 +90,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CheckBox" />
+        <Button
+            android:id="@+id/recycle_bin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="回收站" />
+        <Button
+            android:id="@+id/checkbox_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="checkbox_delete" />
 
     </LinearLayout>
 

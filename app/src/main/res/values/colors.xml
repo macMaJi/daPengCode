@@ -78,4 +78,17 @@
     <color name="select_all_no_cilck">#E9E9E9</color>
     <color name="text_kill_job">#F29B0C</color>
     <color name="new_whole_red">#FF3B30</color>
+    <color name="color_F4F4F4">#FFF4F4F4</color>
+    <color name="color_FD5400">#FFFD5400</color>
+    <color name="color_CCCCCC">#FFCCCCCC</color>
+
+    <color name="choosefile_tabcolor">#0066CC</color>
+    <color name="global_grey">#99333333</color>
+    <color name="global_title_color">#ff333333</color>
+    <color name="global_time_color">#FF999999</color>
+    <color name="global_text_grey">#adadad</color>
+    <color name="global_text_black">#373737</color>
+    <color name="color_fd5400">#FD5400</color>
+    <color name="color_A6A6A6">#FFA6A6A6</color>
+    <color name="white">#ffffff</color>
 </resources>

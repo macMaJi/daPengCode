@@ -2,7 +2,6 @@ package com.example.free.mymvpdemo.ui;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -10,7 +9,7 @@ import android.widget.Toast;
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.adapter.MyAdapter;
-import com.example.free.mymvpdemo.helper.Nav;
+import com.example.free.mymvpdemo.manager.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 import com.example.free.mymvpdemo.view.recyclerview.RecyclerViewClickListener;
 

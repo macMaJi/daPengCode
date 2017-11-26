@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.free.mymvpdemo.R;
-import com.example.free.mymvpdemo.helper.Nav;
+import com.example.free.mymvpdemo.manager.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;

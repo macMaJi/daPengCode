@@ -1,4 +1,4 @@
-package com.example.free.mymvpdemo.helper;
+package com.example.free.mymvpdemo.manager;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,10 +10,12 @@ import com.example.free.mymvpdemo.service.AIDLService;
 import com.example.free.mymvpdemo.service.MyService;
 import com.example.free.mymvpdemo.ui.AIDLActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxActivity;
+import com.example.free.mymvpdemo.ui.CheckBoxDeleteActivity;
 import com.example.free.mymvpdemo.ui.EventbusActivity;
 import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.LightControlActivity;
 import com.example.free.mymvpdemo.ui.My9PatchActivity;
+import com.example.free.mymvpdemo.ui.RecycleBinActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
 import com.example.free.mymvpdemo.ui.TimeActivity;
@@ -92,4 +94,14 @@ public class Nav {
     public static void toCheckBoxActivity(Activity activity) {
         activity.startActivity(new Intent(activity, CheckBoxActivity.class));
     }
+
+    public static void toRecycleBinActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, RecycleBinActivity.class));
+
+    }
+
+    public static void toCheckBoxDeleteActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, CheckBoxDeleteActivity.class));
+    }
+
 }

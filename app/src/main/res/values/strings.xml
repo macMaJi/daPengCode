@@ -6,4 +6,8 @@
     <string name="contrast">亮度</string>
     <string name="lightness">色度</string>
 
+    <string name="recycle_bin_description">回收站中超过30天的内容将被自动删除</string>
+    <string name="restore">还原</string>
+    <string name="delete">删除</string>
+
 </resources>

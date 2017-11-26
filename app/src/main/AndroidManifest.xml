@@ -52,7 +52,9 @@
 
         <activity android:name=".ui.TimeActivity" />
         <activity android:name=".ui.LightControlActivity" />
-        <activity android:name=".ui.CheckBoxActivity"></activity>
+        <activity android:name=".ui.CheckBoxActivity" />
+        <activity android:name=".ui.RecycleBinActivity"/>
+        <activity android:name=".ui.CheckBoxDeleteActivity"/>
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.free.mymvpdemo.R;
-import com.example.free.mymvpdemo.helper.Nav;
+import com.example.free.mymvpdemo.manager.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
@@ -43,6 +43,8 @@ public class MainActivity extends BaseActivity {
     Button lightControl;
     @BindView(R.id.checkbox)
     Button checkbox;
+    @BindView(R.id.recycle_bin)
+    Button recycleBin;
 
     @Override
     protected int getLayoutId() {
@@ -132,6 +134,16 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.checkbox)
     public void checkbox() {
         Nav.toCheckBoxActivity(this);
+    }
+
+    @OnClick(R.id.recycle_bin)
+    public void recycleBin() {
+        Nav.toRecycleBinActivity(this);
+    }
+
+    @OnClick(R.id.checkbox_delete)
+    public void checkBoxDelete() {
+        Nav.toCheckBoxDeleteActivity(this);
     }
 
     @Override
