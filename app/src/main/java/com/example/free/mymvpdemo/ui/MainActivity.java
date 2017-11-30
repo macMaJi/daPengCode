@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.free.mymvpdemo.R;
-import com.example.free.mymvpdemo.manager.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
+import com.example.free.mymvpdemo.manager.Nav;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,6 +45,10 @@ public class MainActivity extends BaseActivity {
     Button checkbox;
     @BindView(R.id.recycle_bin)
     Button recycleBin;
+    @BindView(R.id.checkbox_delete)
+    Button checkboxDelete;
+    @BindView(R.id.user_dialog)
+    Button userDialog;
 
     @Override
     protected int getLayoutId() {
@@ -145,6 +149,12 @@ public class MainActivity extends BaseActivity {
     public void checkBoxDelete() {
         Nav.toCheckBoxDeleteActivity(this);
     }
+
+    @OnClick(R.id.user_dialog)
+    public void toUserDialog() {
+        Nav.toUserDialogActivity(this);
+    }
+
 
     @Override
     public boolean showTitleBar() {

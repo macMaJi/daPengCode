@@ -19,6 +19,7 @@ import com.example.free.mymvpdemo.ui.RecycleBinActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
 import com.example.free.mymvpdemo.ui.TimeActivity;
+import com.example.free.mymvpdemo.ui.UserDialogActivity;
 import com.example.free.mymvpdemo.ui.eventbus.EventBus1;
 import com.example.free.mymvpdemo.ui.eventbus.EventBus2;
 
@@ -45,7 +46,7 @@ public class Nav {
     }
 
     public static void bindMyService(Activity activity, ServiceConnection serviceConnection) {
-        MyService.isBind =  activity.bindService(new Intent(activity, MyService.class), serviceConnection, Context.BIND_AUTO_CREATE);
+        MyService.isBind = activity.bindService(new Intent(activity, MyService.class), serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
     public static void unBindMyService(Activity activity, ServiceConnection serviceConnection) {
@@ -64,6 +65,7 @@ public class Nav {
     public static void toJNIActivity(Activity activity) {
         activity.startActivity(new Intent(activity, JNIActivity.class));
     }
+
     public static void bindAIDLService(Activity activity, ServiceConnection serviceConnection) {
         activity.bindService(new Intent(activity, AIDLService.class), serviceConnection, Context.BIND_AUTO_CREATE);
     }
@@ -71,6 +73,7 @@ public class Nav {
     public static void toEventBusActivity(Activity activity) {
         activity.startActivity(new Intent(activity, EventbusActivity.class));
     }
+
     public static void toMy9PatchActivity(Activity activity) {
         activity.startActivity(new Intent(activity, My9PatchActivity.class));
     }
@@ -102,6 +105,10 @@ public class Nav {
 
     public static void toCheckBoxDeleteActivity(Activity activity) {
         activity.startActivity(new Intent(activity, CheckBoxDeleteActivity.class));
+    }
+
+    public static void toUserDialogActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, UserDialogActivity.class));
     }
 
 }
