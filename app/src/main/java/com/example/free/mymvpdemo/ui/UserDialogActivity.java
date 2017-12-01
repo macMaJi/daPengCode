@@ -89,7 +89,8 @@ public class UserDialogActivity extends BaseActivity implements View.OnClickList
                                 intent.putExtra("filename", name);
                                 intent.putExtra("filepath", fileCompress);
                                 setResult(RESULT_OK, intent);
-                                finish();
+                                setFinishAndCancelSystemResult();
+
                             } else {
                                 ULog.e("PicChooseActivity", "拍照失败");
                             }
@@ -114,7 +115,8 @@ public class UserDialogActivity extends BaseActivity implements View.OnClickList
                             intent.putExtra("filename", name);
                             intent.putExtra("filepath", imagePath);
                             setResult(RESULT_OK, intent);
-                            finish();
+                            setFinishAndCancelSystemResult();
+
                         } else {
                             ULog.e("UserIconDialog", "照片选择失败");
                         }
@@ -129,7 +131,7 @@ public class UserDialogActivity extends BaseActivity implements View.OnClickList
                         intent.putExtra("filename", filename);
                         intent.putExtra("filepath", filepath);
                         setResult(RESULT_OK, intent);
-                        finish();
+                        setFinishAndCancelSystemResult();
                     }
                 }
                 break;
@@ -146,7 +148,7 @@ public class UserDialogActivity extends BaseActivity implements View.OnClickList
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
-        finish();
+        setFinishAndCancelSystemResult();
     }
 
 
@@ -181,7 +183,7 @@ public class UserDialogActivity extends BaseActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.root_view:
-                finish();
+                setFinishAndCancelSystemResult();
                 break;
             case R.id.select_pic_photo:
                 MiraclePicture.toMyPhotos(UserDialogActivity.this);
@@ -191,8 +193,18 @@ public class UserDialogActivity extends BaseActivity implements View.OnClickList
                 MiraclePicture.toMyCamera(UserDialogActivity.this);
                 break;
             case R.id.select_pic_cancel:
-                finish();
+                setFinishAndCancelSystemResult();
                 break;
         }
+    }
+
+    /**
+     * 让自己设置的 出场 离场 动画生效
+     */
+    private void setFinishAndCancelSystemResult() {
+        finish();
+
+        //这段代码至关重要， 出场 离场 动画
+        overridePendingTransition(0,0);
     }
 }

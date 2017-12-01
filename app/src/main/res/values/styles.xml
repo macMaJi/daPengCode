@@ -11,6 +11,7 @@
 
     <style name="noAnimationTheme" parent="AppTheme_custom">
         <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
         <item name="android:windowBackground">@color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@style/NoAnim</item>
