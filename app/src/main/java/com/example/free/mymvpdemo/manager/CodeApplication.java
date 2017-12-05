@@ -11,7 +11,7 @@ import com.blankj.utilcode.util.LogUtils;
 
 public class CodeApplication extends Application {
 
-    public static Context applicationContext = null;
+    public static Application applicationContext = null;
 
     @Override
     public void onCreate() {

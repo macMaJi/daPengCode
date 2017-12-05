@@ -1,12 +1,28 @@
 package com.example.free.mymvpdemo.ui;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.util.ArrayMap;
 import android.widget.Button;
 
+import com.blankj.utilcode.util.ActivityUtils;
+import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.Utils;
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 import com.example.free.mymvpdemo.manager.Nav;
+
+import java.lang.ref.WeakReference;
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -165,5 +181,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
+
+        LogUtils.e("hahhaha:" + ActivityUtils.getTopActivity());
     }
+
 }
