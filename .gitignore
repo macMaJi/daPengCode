@@ -1,7 +1,5 @@
 /build
 .gradle
 .idea
-*.build
 local.properties
-myCode.iml
 *.iml
