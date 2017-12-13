@@ -65,6 +65,8 @@ public class MainActivity extends BaseActivity {
     Button checkboxDelete;
     @BindView(R.id.user_dialog)
     Button userDialog;
+    @BindView(R.id.immersion_jump)
+    Button immersionJump;
 
     @Override
     protected int getLayoutId() {
@@ -169,6 +171,11 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.user_dialog)
     public void toUserDialog() {
         Nav.toUserDialogActivity(this);
+    }
+
+    @OnClick(R.id.immersion_jump)
+    public void toImmersionJump() {
+        Nav.toImmersionActivity(this);
     }
 
 

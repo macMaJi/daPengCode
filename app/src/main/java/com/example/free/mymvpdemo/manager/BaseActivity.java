@@ -1,7 +1,6 @@
 package com.example.free.mymvpdemo.manager;
 
 import android.app.ProgressDialog;
-import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -31,7 +30,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public String TAG = getClass().getSimpleName();
     private LinearLayout mRootView;
     private TitleBar mTitleBar;
-    private FrameLayout mlayoutView;
+    private FrameLayout mLayoutView;
 
 
     @Override
@@ -41,9 +40,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (showTitleBar()) {
             setContentView(R.layout.activity_base);
             mRootView = ((LinearLayout) findViewById(R.id.root_view));
-            mTitleBar = (TitleBar)findViewById(R.id.titleBar);
-            mlayoutView = ((FrameLayout) findViewById(R.id.layout_view));
-            mlayoutView.addView(getLayout());
+            mTitleBar = (TitleBar) findViewById(R.id.titleBar);
+            mLayoutView = ((FrameLayout) findViewById(R.id.layout_view));
+            mLayoutView.addView(getLayout());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 int statusBarHeight1 = -1;
@@ -74,7 +73,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         ActivityManager.getInstance().addActivity(this);
     }
 
-    public void initView(Bundle savedInstanceState){
+    public void initView(Bundle savedInstanceState) {
         initView();
     }
 
@@ -155,8 +154,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract void initData();
 
 
-
-
     //--------------------------Activity工具 --------------------------------------//
 
     /**
@@ -196,7 +193,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             try {
                 waitDialog.dismiss();
                 waitDialog = null;
-                isVisible =false;
+                isVisible = false;
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -209,10 +206,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onDestroy();
         ActivityManager.getInstance().destroyActivity(this);
         HttpUtils.getInstance().cancelRequest(this);
-        if(waitDialog!=null){
-            try{
+        if (waitDialog != null) {
+            try {
                 waitDialog.dismiss();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

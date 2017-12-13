@@ -12,6 +12,7 @@ import com.example.free.mymvpdemo.ui.AIDLActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxDeleteActivity;
 import com.example.free.mymvpdemo.ui.EventbusActivity;
+import com.example.free.mymvpdemo.ui.ImmersionActivity;
 import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.LightControlActivity;
 import com.example.free.mymvpdemo.ui.My9PatchActivity;
@@ -109,6 +110,9 @@ public class Nav {
 
     public static void toUserDialogActivity(Activity activity) {
         activity.startActivity(new Intent(activity, UserDialogActivity.class));
+    }
+    public static void toImmersionActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, ImmersionActivity.class));
     }
 
 }

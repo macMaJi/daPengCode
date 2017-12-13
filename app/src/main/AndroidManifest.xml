@@ -55,13 +55,13 @@
         <activity android:name=".ui.CheckBoxActivity" />
         <activity android:name=".ui.RecycleBinActivity" />
         <activity android:name=".ui.CheckBoxDeleteActivity" />
-
         <activity
             android:name=".ui.UserDialogActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/noAnimationTheme" />
+        <activity android:name=".ui.ImmersionActivity"></activity>
     </application>
 
 </manifest>
