@@ -19,6 +19,7 @@ import com.example.free.mymvpdemo.ui.My9PatchActivity;
 import com.example.free.mymvpdemo.ui.RecycleBinActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
+import com.example.free.mymvpdemo.ui.TextWatcherActivity;
 import com.example.free.mymvpdemo.ui.TimeActivity;
 import com.example.free.mymvpdemo.ui.UserDialogActivity;
 import com.example.free.mymvpdemo.ui.eventbus.EventBus1;
@@ -111,8 +112,13 @@ public class Nav {
     public static void toUserDialogActivity(Activity activity) {
         activity.startActivity(new Intent(activity, UserDialogActivity.class));
     }
+
     public static void toImmersionActivity(Activity activity) {
         activity.startActivity(new Intent(activity, ImmersionActivity.class));
+    }
+
+    public static void toTextWatcherActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, TextWatcherActivity.class));
     }
 
 }

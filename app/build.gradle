@@ -40,6 +40,7 @@ dependencies {
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     compile 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
     compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
 
     compile 'com.github.bumptech.glide:glide:4.3.1'

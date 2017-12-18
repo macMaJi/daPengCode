@@ -21,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.ServiceActivity2"
             android:launchMode="singleTop"
@@ -45,8 +44,7 @@
         <activity android:name=".ui.eventbus.EventBus2" />
         <activity android:name=".ui.My9PatchActivity" />
         <activity android:name=".ui.SwipeRecyclerViewActivity" />
-        <activity android:name=".ui.ImmersionActivity"/>
-
+        <activity android:name=".ui.ImmersionActivity" />
         <activity
             android:name=".ui.UserDialogActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -54,9 +52,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/noAnimationTheme" />
 
-
-
-        <!--      service      -->
+        <!-- service -->
         <service
             android:name=".service.MyService"
             android:enabled="true"
@@ -65,6 +61,8 @@
             android:name=".service.AIDLService"
             android:enabled="true"
             android:exported="true" />
+
+        <activity android:name=".ui.TextWatcherActivity"></activity>
     </application>
 
 </manifest>
