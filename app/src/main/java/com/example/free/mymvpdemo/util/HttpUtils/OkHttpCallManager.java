@@ -6,9 +6,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import okhttp3.Call;
 
-/**
- * Created by qioda on 2016/10/28.
- */
 
 class OkHttpCallManager {
     private ConcurrentHashMap<Object, List<Call>> callMap;
