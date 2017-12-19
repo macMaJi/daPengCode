@@ -12,6 +12,7 @@ import com.example.free.mymvpdemo.ui.AIDLActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxDeleteActivity;
 import com.example.free.mymvpdemo.ui.EventbusActivity;
+import com.example.free.mymvpdemo.ui.GlideActivity;
 import com.example.free.mymvpdemo.ui.ImmersionActivity;
 import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.LightControlActivity;
@@ -119,6 +120,10 @@ public class Nav {
 
     public static void toTextWatcherActivity(Activity activity) {
         activity.startActivity(new Intent(activity, TextWatcherActivity.class));
+    }
+
+    public static void toGlideActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, GlideActivity.class));
     }
 
 }

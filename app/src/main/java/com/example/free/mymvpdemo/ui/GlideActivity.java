@@ -5,6 +5,7 @@ import android.widget.ImageView;
 
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.manager.BaseActivity;
+import com.example.free.mymvpdemo.view.RayGlide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,6 +23,9 @@ public class GlideActivity extends BaseActivity {
     @Override
     protected void initView() {
 
+        RayGlide.loadWithCircle(this,
+                "http://g.hiphotos.baidu.com/image/pic/item/4610b912c8fcc3ce4d83cff99b45d688d53f20bc.jpg",
+                ivIcon);
     }
 
     @Override
