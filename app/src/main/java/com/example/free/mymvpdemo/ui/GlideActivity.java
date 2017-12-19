@@ -24,7 +24,7 @@ public class GlideActivity extends BaseActivity {
     protected void initView() {
 
         RayGlide.loadWithCircle(this,
-                "http://g.hiphotos.baidu.com/image/pic/item/4610b912c8fcc3ce4d83cff99b45d688d53f20bc.jpg",
+                "https://wx4.sinaimg.cn/crop.0.0.640.640.640/006g0DdOly1fmdxskt6kbj30yi0ykgst.jpg",
                 ivIcon);
     }
 

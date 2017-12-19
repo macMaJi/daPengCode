@@ -17,7 +17,6 @@
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -45,6 +44,8 @@
         <activity android:name=".ui.My9PatchActivity" />
         <activity android:name=".ui.SwipeRecyclerViewActivity" />
         <activity android:name=".ui.ImmersionActivity" />
+        <activity android:name=".ui.TextWatcherActivity" />
+        <activity android:name=".ui.GlideActivity" />
         <activity
             android:name=".ui.UserDialogActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -62,14 +63,6 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ui.TextWatcherActivity" />
-        <activity android:name=".ui.GlideActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

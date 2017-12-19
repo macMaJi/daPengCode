@@ -84,7 +84,6 @@ public class TextWatcherActivity extends BaseActivity implements TextWatcher {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbinder.unbind();
     }
 
 
