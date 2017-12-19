@@ -120,6 +120,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="glide的使用" />
+        <Button
+            android:id="@+id/ok_http"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="okHttp的使用" />
 
     </LinearLayout>
 

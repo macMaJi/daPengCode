@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.Manifest.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".manager.CodeApplication"
@@ -17,6 +19,7 @@
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -39,8 +42,8 @@
         <activity android:name=".ui.AIDLActivity" />
         <activity android:name=".ui.JNIActivity" />
         <activity android:name=".ui.EventbusActivity" />
-        <activity android:name=".ui.eventbus.EventBus1" />
-        <activity android:name=".ui.eventbus.EventBus2" />
+        <activity android:name=".ui.EventBus1" />
+        <activity android:name=".ui.EventBus2" />
         <activity android:name=".ui.My9PatchActivity" />
         <activity android:name=".ui.SwipeRecyclerViewActivity" />
         <activity android:name=".ui.ImmersionActivity" />
@@ -63,6 +66,7 @@
             android:enabled="true"
             android:exported="true" />
 
+        <activity android:name=".ui.OkHttp3Activity"></activity>
     </application>
 
 </manifest>

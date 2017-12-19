@@ -17,14 +17,15 @@ import com.example.free.mymvpdemo.ui.ImmersionActivity;
 import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.LightControlActivity;
 import com.example.free.mymvpdemo.ui.My9PatchActivity;
+import com.example.free.mymvpdemo.ui.OkHttp3Activity;
 import com.example.free.mymvpdemo.ui.RecycleBinActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
 import com.example.free.mymvpdemo.ui.TextWatcherActivity;
 import com.example.free.mymvpdemo.ui.TimeActivity;
 import com.example.free.mymvpdemo.ui.UserDialogActivity;
-import com.example.free.mymvpdemo.ui.eventbus.EventBus1;
-import com.example.free.mymvpdemo.ui.eventbus.EventBus2;
+import com.example.free.mymvpdemo.ui.EventBus1;
+import com.example.free.mymvpdemo.ui.EventBus2;
 
 /**
  * Created by free on 2017/7/30.
@@ -124,6 +125,11 @@ public class Nav {
 
     public static void toGlideActivity(Activity activity) {
         activity.startActivity(new Intent(activity, GlideActivity.class));
+    }
+
+
+    public static void toOkHttp3Activity(Activity activity) {
+        activity.startActivity(new Intent(activity, OkHttp3Activity.class));
     }
 
 }

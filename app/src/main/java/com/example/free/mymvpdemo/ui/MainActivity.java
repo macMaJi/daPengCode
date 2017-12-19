@@ -178,6 +178,11 @@ public class MainActivity extends BaseActivity {
         Nav.toGlideActivity(this);
     }
 
+    @OnClick(R.id.ok_http)
+    public void toOkHttp() {
+        Nav.toOkHttp3Activity(this);
+    }
+
 
     @Override
     public boolean showTitleBar() {
