@@ -12,7 +12,7 @@ import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.view.glide.GlideCircleTransform;
 import com.example.free.mymvpdemo.view.glide.GlideRoundTransform;
 
-public class RayGlide {
+public class LunaGlide {
 
 
     private static RequestOptions setRequestOptions() {

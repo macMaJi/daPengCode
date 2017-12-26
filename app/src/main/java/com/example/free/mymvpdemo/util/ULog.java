@@ -8,7 +8,7 @@ public class ULog {
      * This flag to indicate the log is enabled or disabled.
      */
     private static boolean isLogEnable = true;
-    private static int LOG_MAXLENGTH = 2000;
+    private static int LOG_MAX_LENGTH = 2000;
 
     /**
      * Debug
@@ -35,12 +35,12 @@ public class ULog {
             Log.i(tag, rebuildMsg(stackTraceElement, ""));
             int strLength = msg.length();
             int start = 0;
-            int end = LOG_MAXLENGTH;
+            int end = LOG_MAX_LENGTH;
             for (int i = 0; i < 100; i++) {
                 if (strLength > end) {
                     Log.i(tag, msg.substring(start, end));
                     start = end;
-                    end = end + LOG_MAXLENGTH;
+                    end = end + LOG_MAX_LENGTH;
                 } else {
                     Log.i(tag, msg.substring(start, strLength));
                     break;
