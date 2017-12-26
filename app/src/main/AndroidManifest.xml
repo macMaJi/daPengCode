@@ -15,6 +15,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- service -->
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.AIDLService"
+            android:enabled="true"
+            android:exported="true" />
+
         <!-- activity -->
         <activity android:name=".ui.MainActivity">
             <intent-filter>
@@ -28,6 +38,13 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/noAnimationTheme" />
+        <activity
+            android:name=".ui.UserDialogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimationTheme" />
+
         <activity android:name=".ui.TimeActivity" />
         <activity android:name=".ui.LightControlActivity" />
         <activity android:name=".ui.CheckBoxActivity" />
@@ -41,7 +58,7 @@
         <activity android:name=".ui.ServiceActivity1" />
         <activity android:name=".ui.AIDLActivity" />
         <activity android:name=".ui.JNIActivity" />
-        <activity android:name=".ui.EventbusActivity" />
+        <activity android:name=".ui.EventBusActivity" />
         <activity android:name=".ui.EventBus1" />
         <activity android:name=".ui.EventBus2" />
         <activity android:name=".ui.My9PatchActivity" />
@@ -49,24 +66,11 @@
         <activity android:name=".ui.ImmersionActivity" />
         <activity android:name=".ui.TextWatcherActivity" />
         <activity android:name=".ui.GlideActivity" />
-        <activity
-            android:name=".ui.UserDialogActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/noAnimationTheme" />
+        <activity android:name=".ui.OkHttp3Activity" />
+        <activity android:name=".ui.HandlerOptimizeStaticActivity" />
+        <activity android:name=".ui.HandlerOptimizeWeakActivity" />
+        <activity android:name=".ui.HandlerUseActivity" />
 
-        <!-- service -->
-        <service
-            android:name=".service.MyService"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".service.AIDLService"
-            android:enabled="true"
-            android:exported="true" />
-
-        <activity android:name=".ui.OkHttp3Activity"></activity>
     </application>
 
 </manifest>

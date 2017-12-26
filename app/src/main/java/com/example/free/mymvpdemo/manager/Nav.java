@@ -11,8 +11,11 @@ import com.example.free.mymvpdemo.service.MyService;
 import com.example.free.mymvpdemo.ui.AIDLActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxDeleteActivity;
-import com.example.free.mymvpdemo.ui.EventbusActivity;
+import com.example.free.mymvpdemo.ui.EventBusActivity;
 import com.example.free.mymvpdemo.ui.GlideActivity;
+import com.example.free.mymvpdemo.ui.HandlerOptimizeStaticActivity;
+import com.example.free.mymvpdemo.ui.HandlerOptimizeWeakActivity;
+import com.example.free.mymvpdemo.ui.HandlerUseActivity;
 import com.example.free.mymvpdemo.ui.ImmersionActivity;
 import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.LightControlActivity;
@@ -75,7 +78,7 @@ public class Nav {
     }
 
     public static void toEventBusActivity(Activity activity) {
-        activity.startActivity(new Intent(activity, EventbusActivity.class));
+        activity.startActivity(new Intent(activity, EventBusActivity.class));
     }
 
     public static void toMy9PatchActivity(Activity activity) {
@@ -130,6 +133,18 @@ public class Nav {
 
     public static void toOkHttp3Activity(Activity activity) {
         activity.startActivity(new Intent(activity, OkHttp3Activity.class));
+    }
+
+    public static void toHandlerUseActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, HandlerUseActivity.class));
+    }
+
+    public static void toHandlerOptimizeStaticActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, HandlerOptimizeStaticActivity.class));
+    }
+
+    public static void toHandlerOptimizeWeakActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, HandlerOptimizeWeakActivity.class));
     }
 
 }

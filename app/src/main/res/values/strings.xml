@@ -10,5 +10,9 @@
     <string name="restore">还原</string>
     <string name="delete">删除</string>
     <string name="glide_show_way">Glide的显示方式</string>
+    <string name="handler_use_optimize">handler的使用和优化</string>
+    <string name="handler_use">handler的使用</string>
+    <string name="handler_optimize_static">handler的静态</string>
+    <string name="handler_optimize_weak">handler的弱引用</string>
 
 </resources>

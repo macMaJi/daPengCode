@@ -10,7 +10,7 @@ import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
 
-public class EventbusActivity extends BaseActivity {
+public class EventBusActivity extends BaseActivity {
 
 
     @BindView(R.id.click)
@@ -36,7 +36,7 @@ public class EventbusActivity extends BaseActivity {
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Nav.toEventBus1(EventbusActivity.this);
+                Nav.toEventBus1(EventBusActivity.this);
             }
         });
     }
