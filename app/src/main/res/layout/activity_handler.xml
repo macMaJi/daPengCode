@@ -6,34 +6,16 @@
 
     <TextView
         android:id="@+id/tv_handler_use"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_10"
-        android:padding="@dimen/dp_10"
-        android:background="@drawable/sha_normal_button"
-        android:textColor="@color/color_FFFFFF"
+        style="@style/style_normal_button"
         android:text="@string/handler_use_optimize" />
 
     <TextView
         android:id="@+id/tv_handler_optimize1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_10"
-        android:padding="@dimen/dp_10"
-        android:background="@drawable/sha_normal_button"
-        android:textColor="@color/color_FFFFFF"
+        style="@style/style_normal_button"
         android:text="@string/handler_optimize_static" />
 
     <TextView
         android:id="@+id/tv_handler_optimize2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_10"
-        android:padding="@dimen/dp_10"
-        android:background="@drawable/sha_normal_button"
-        android:textColor="@color/color_FFFFFF"
+        style="@style/style_normal_button"
         android:text="@string/handler_optimize_weak" />
 </LinearLayout>
