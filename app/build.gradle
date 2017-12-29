@@ -16,6 +16,15 @@ android {
             ldLibs "log", "z", "m"
             abiFilters "armeabi", "armeabi-v7a", "x86", "x86_64"
         }
+
+        manifestPlaceholders = [
+
+                XG_ACCESS_ID : "2100274311",
+                XG_ACCESS_KEY: "A7ICE284XG1X",
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "d2d49f37dc1c26702e3befc7", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
     }
     buildTypes {
         release {
@@ -44,4 +53,12 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.3.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
     compile 'com.github.bumptech.glide:okhttp3-integration:4.3.1'
+
+    //信鸽3.2.0 稳定版本
+    compile 'com.tencent.xinge:xinge:3.2.0-release'  //信鸽jar
+    compile 'com.tencent.wup:wup:1.0.0.E-release'  //wup包
+    compile 'com.tencent.mid:mid:4.0.0-release'  //mid包
+
+    compile 'cn.jiguang.sdk:jpush:3.0.9'  // 此处以JPush 3.0.9 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.7'  // 此处以JCore 1.1.7 版本为例。
 }

@@ -2,6 +2,7 @@ package com.example.free.mymvpdemo.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.ActivityUtils;
@@ -9,6 +10,10 @@ import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 import com.example.free.mymvpdemo.manager.Nav;
+import com.tencent.android.tpush.XGIOperateCallback;
+import com.tencent.android.tpush.XGPushConfig;
+import com.tencent.android.tpush.XGPushManager;
+import com.tencent.android.tpush.common.Constants;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -75,7 +80,28 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        XGPushManager.registerPush(getApplicationContext(),
+                new XGIOperateCallback() {
+                    @Override
+                    public void onSuccess(Object data, int flag) {
+                        Log.w(Constants.LogTag, "+++ register push sucess. token:" + data + "flag" + flag);
+//                        m.obj = "+++ register push sucess. token:" + data;
+//                        m.sendToTarget();
+                    }
 
+                    @Override
+                    public void onFail(Object data, int errCode, String msg) {
+                        Log.w(Constants.LogTag,
+                                "+++ register push fail. token:" + data
+                                        + ", errCode:" + errCode + ",msg:"
+                                        + msg);
+//                        m.obj = "+++ register push fail. token:" + data
+//                                + ", errCode:" + errCode + ",msg:" + msg;
+//                        m.sendToTarget();
+                    }
+                });
+        // 获取token
+        XGPushConfig.getToken(this);
     }
 
     @OnClick(R.id.button_enter_layout)
