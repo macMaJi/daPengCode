@@ -28,8 +28,10 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
+
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:support-v4:25.4.0'
+    compile 'com.android.support:recyclerview-v7:25.4.0'
     compile 'com.jakewharton:butterknife:8.7.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.blankj:utilcode:1.9.10'
@@ -41,6 +43,7 @@ dependencies {
     compile 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
     compile 'com.gyf.barlibrary:barlibrary:2.3.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
     compile 'org.greenrobot:greendao:3.2.2'   // add library
 

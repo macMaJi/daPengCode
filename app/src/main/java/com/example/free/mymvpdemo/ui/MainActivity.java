@@ -55,6 +55,8 @@ public class MainActivity extends BaseActivity {
     Button immersionJump;
     @BindView(R.id.text_watcher)
     Button textWatcher;
+    @BindView(R.id.change_fragment)
+    Button changeFragment;
 
     @Override
     protected int getLayoutId() {
@@ -169,6 +171,11 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.text_watcher)
     public void toTextWatcher() {
         Nav.toTextWatcherActivity(this);
+    }
+
+    @OnClick(R.id.change_fragment)
+    public void toChangeFragment() {
+        Nav.toChangeTabActivity(this);
     }
 
 

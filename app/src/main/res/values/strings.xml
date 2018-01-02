@@ -11,4 +11,7 @@
     <string name="delete">删除</string>
     <string name="glide_show_way">Glide的显示方式</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">交流的fragment</string>
+
 </resources>

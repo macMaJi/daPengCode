@@ -9,6 +9,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.example.free.mymvpdemo.service.AIDLService;
 import com.example.free.mymvpdemo.service.MyService;
 import com.example.free.mymvpdemo.ui.AIDLActivity;
+import com.example.free.mymvpdemo.ui.ChangeTabActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxDeleteActivity;
 import com.example.free.mymvpdemo.ui.EventbusActivity;
@@ -119,6 +120,11 @@ public class Nav {
 
     public static void toTextWatcherActivity(Activity activity) {
         activity.startActivity(new Intent(activity, TextWatcherActivity.class));
+    }
+
+
+    public static void toChangeTabActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, ChangeTabActivity.class));
     }
 
 }
