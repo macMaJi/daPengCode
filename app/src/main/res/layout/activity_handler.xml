@@ -4,18 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/open_handler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="开启我的Handler" />
+    <TextView
+        android:id="@+id/tv_handler_use"
+        style="@style/style_normal_button"
+        android:text="@string/handler_use_optimize" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="在子线程中开启Handler方法"
-        android:id="@+id/in_line_open_Handler"
-        />
+    <TextView
+        android:id="@+id/tv_handler_optimize1"
+        style="@style/style_normal_button"
+        android:text="@string/handler_optimize_static" />
+
+    <TextView
+        android:id="@+id/tv_handler_optimize2"
+        style="@style/style_normal_button"
+        android:text="@string/handler_optimize_weak" />
 </LinearLayout>

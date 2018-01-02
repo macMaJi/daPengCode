@@ -39,6 +39,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
+import com.blankj.utilcode.util.NetworkUtils;
 import com.example.free.mymvpdemo.bean.ContactsInfo;
 import com.example.free.mymvpdemo.manager.CodeApplication;
 import com.google.gson.Gson;
@@ -66,18 +67,6 @@ import java.util.Set;
  * PHONE：18611825220
  */
 public class DeviceInfo {
-
-
-    /**
-     * 获取当前网络状态
-     *
-     * @return NetworkInfo
-     */
-    public static NetworkInfo getCurrentNetStatus(Context ctx) {
-        ConnectivityManager manager = (ConnectivityManager) ctx
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-        return manager.getActiveNetworkInfo();
-    }
 
     /**
      * 获取手机状态栏高度
@@ -123,16 +112,9 @@ public class DeviceInfo {
     /**
      * 获取网络连接状态
      *
-     * @param ctx
-     * @return true:有网 false：没网
      */
-    public static boolean isNetworkAvailable(Context ctx) {
-        NetworkInfo nki = getCurrentNetStatus(ctx);
-        if (nki != null) {
-            return nki.isAvailable();
-        } else {
-            return false;
-        }
+    public static boolean isNetworkAvailable() {
+        return NetworkUtils.isConnected();
     }
 
     /**

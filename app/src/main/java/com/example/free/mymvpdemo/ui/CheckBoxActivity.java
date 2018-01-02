@@ -27,6 +27,8 @@ public class CheckBoxActivity extends BaseActivity {
 
     private CheckBoxAdapter checkBoxAdapter;
     private List<CheckBoxBean> checkBoxBeanList;
+    private boolean isSingleSelect = true;
+
 
     @Override
     protected int getLayoutId() {
@@ -51,12 +53,27 @@ public class CheckBoxActivity extends BaseActivity {
         recyclerView.addOnItemTouchListener(new OnItemClickListener() {
             @Override
             public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
-                if (checkBoxBeanList.get(position).isChecked == 0) {
-                    checkBoxBeanList.get(position).isChecked = 1;
+                if (isSingleSelect) {
+                    for (int i = 0; i < checkBoxAdapter.getData().size(); i++) {
+                        if (i == position) {
+                            if (checkBoxAdapter.getData().get(position).isChecked == 0) {
+                                checkBoxAdapter.getData().get(position).isChecked = 1;
+                            } else {
+                                checkBoxAdapter.getData().get(position).isChecked = 0;
+                            }
+                            continue;
+                        }
+                        checkBoxAdapter.getData().get(i).isChecked = 0;
+                    }
+                    checkBoxAdapter.notifyDataSetChanged();
                 } else {
-                    checkBoxBeanList.get(position).isChecked = 0;
+                    if (checkBoxBeanList.get(position).isChecked == 0) {
+                        checkBoxBeanList.get(position).isChecked = 1;
+                    } else {
+                        checkBoxBeanList.get(position).isChecked = 0;
+                    }
+                    checkBoxAdapter.notifyItemChanged(position);
                 }
-                checkBoxAdapter.notifyItemChanged(position);
             }
         });
     }

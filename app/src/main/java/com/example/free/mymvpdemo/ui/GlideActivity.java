@@ -5,6 +5,7 @@ import android.widget.ImageView;
 
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.manager.BaseActivity;
+import com.example.free.mymvpdemo.view.LunaGlide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,6 +23,9 @@ public class GlideActivity extends BaseActivity {
     @Override
     protected void initView() {
 
+        LunaGlide.loadWithCircle(this,
+                "https://wx4.sinaimg.cn/crop.0.0.640.640.640/006g0DdOly1fmdxskt6kbj30yi0ykgst.jpg",
+                ivIcon);
     }
 
     @Override

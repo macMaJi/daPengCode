@@ -87,11 +87,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         return true;
     }
 
-
     /**
      * 设置右边按钮
-     *
-     * @param resId
      */
     public void setRightBtn(int resId) {
         if (showTitleBar()) {
@@ -100,10 +97,20 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    public void setTitle(int resId) {
+        if (showTitleBar()) {
+            mTitleBar.setTitleText(resId);
+        }
+    }
+
+    public void setTitle(String title) {
+        if (showTitleBar()) {
+            mTitleBar.setTitleText(title);
+        }
+    }
+
     /**
      * title右侧按钮点击
-     *
-     * @param leftClick
      */
     public void setRightClick(TitleBar.TitleBarRightClick leftClick) {
         if (showTitleBar()) {
@@ -113,8 +120,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /**
      * 设置右边按钮
-     *
-     * @param rightText
      */
     public void setRightBtn(String rightText) {
         if (showTitleBar()) {
@@ -125,8 +130,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /**
      * 加载布局文件
-     *
-     * @return
      */
     protected abstract int getLayoutId();
 
@@ -144,17 +147,17 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract void initView();
 
     /**
-     * 添加监听之间
-     */
-    protected abstract void initListener();
-
-    /**
      * 初始化数据
      */
     protected abstract void initData();
 
+    /**
+     * 添加监听之间
+     */
+    protected abstract void initListener();
 
-    //--------------------------Activity工具 --------------------------------------//
+
+    //-------------------------- Activity工具 --------------------------------------//
 
     /**
      * findViewbyId封装，省去强转

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 
+import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.free.mymvpdemo.bean.BaseBean;
 import com.example.free.mymvpdemo.manager.CodeApplication;
@@ -111,7 +112,7 @@ public class HttpUtils {
      * @param result 请求回调
      */
     public Call postRequest(String url, Map<String, String> params, Object tag, HttpResult result) {
-        setBaseParams(params);
+//        setBaseParams(params);
         return postRequestBase(url, params, tag, result);
     }
 
@@ -150,7 +151,8 @@ public class HttpUtils {
             params = new HashMap<>();
         }
         ULog.i("http", "\n url:" + url + "\n params:" + params.toString());
-        if (!DeviceInfo.isNetworkAvailable(CodeApplication.applicationContext)) {
+        if (!DeviceInfo.isNetworkAvailable()) {
+
 //            UToast.showToast("请检查您的网络");
             result.onError(NO_NEYWORK, null);
             return;
@@ -196,7 +198,7 @@ public class HttpUtils {
      */
     private Call postRequestBase(String url, Map<String, String> params, Object tag, HttpResult result) {
         ULog.i("http", "\n 请求:" +"\n" + url + "\n" + params.toString());
-        if (!DeviceInfo.isNetworkAvailable(CodeApplication.applicationContext)) {
+        if (!DeviceInfo.isNetworkAvailable()) {
 //            new StatusDialog(SampleApplicationContext.application).showErrorDialog();
             result.onError(NO_NEYWORK, null);
             return null;
@@ -568,7 +570,7 @@ public class HttpUtils {
      * @param files
      */
     public void sendMultipart(String url, Map<String, String> params, List<FormImage> files, HttpResult result, Object tag) {
-        if (!DeviceInfo.isNetworkAvailable(CodeApplication.applicationContext)) {
+        if (!DeviceInfo.isNetworkAvailable()) {
 //            UToast.showToast("请检查您的网络");
             result.onError(NO_NEYWORK, null);
             return;
