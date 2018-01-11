@@ -216,6 +216,11 @@ public class MainActivity extends BaseActivity {
         Nav.toOkHttp3Activity(this);
     }
 
+    @OnClick(R.id.text_view)
+    public void toTextView() {
+        Nav.toTextViewActivity(this);
+    }
+
 
     @Override
     public boolean showTitleBar() {

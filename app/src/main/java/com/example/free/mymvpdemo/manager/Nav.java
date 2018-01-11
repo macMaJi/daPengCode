@@ -25,6 +25,7 @@ import com.example.free.mymvpdemo.ui.OkHttp3Activity;
 import com.example.free.mymvpdemo.ui.RecycleBinActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
+import com.example.free.mymvpdemo.ui.TextViewActivity;
 import com.example.free.mymvpdemo.ui.TextWatcherActivity;
 import com.example.free.mymvpdemo.ui.TimeActivity;
 import com.example.free.mymvpdemo.ui.UserDialogActivity;
@@ -151,6 +152,10 @@ public class Nav {
 
     public static void toHandlerOptimizeWeakActivity(Activity activity) {
         activity.startActivity(new Intent(activity, HandlerOptimizeWeakActivity.class));
+    }
+
+    public static void toTextViewActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, TextViewActivity.class));
     }
 
 }
