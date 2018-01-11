@@ -38,7 +38,7 @@ public class RecyclerViewActivity extends BaseActivity {
     protected void initView() {
         mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         changeShowMode = ((Button) findViewById(R.id.button_change));
-        initData();
+        initAdapterData();
         mAdapter = new HomeAdapter(this, mDatas);
         initEvent();
         initNormalRecyclerView();
@@ -53,6 +53,11 @@ public class RecyclerViewActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     @Override
@@ -79,7 +84,7 @@ public class RecyclerViewActivity extends BaseActivity {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    protected void initData() {
+    protected void initAdapterData() {
         mDatas = new ArrayList<>();
         for (int i = 'A'; i < 'z'; i++) {
             mDatas.add("" + (char) i);
