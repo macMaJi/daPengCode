@@ -14,6 +14,7 @@ import com.example.free.mymvpdemo.ui.CheckBoxActivity;
 import com.example.free.mymvpdemo.ui.CheckBoxDeleteActivity;
 import com.example.free.mymvpdemo.ui.EventBusActivity;
 import com.example.free.mymvpdemo.ui.GlideActivity;
+import com.example.free.mymvpdemo.ui.HandlerActivity;
 import com.example.free.mymvpdemo.ui.HandlerOptimizeStaticActivity;
 import com.example.free.mymvpdemo.ui.HandlerOptimizeWeakActivity;
 import com.example.free.mymvpdemo.ui.HandlerUseActivity;
@@ -22,10 +23,15 @@ import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.LightControlActivity;
 import com.example.free.mymvpdemo.ui.MultipleItemUseActivity;
 import com.example.free.mymvpdemo.ui.My9PatchActivity;
+import com.example.free.mymvpdemo.ui.MyLayoutActivity;
 import com.example.free.mymvpdemo.ui.OkHttp3Activity;
+import com.example.free.mymvpdemo.ui.PicassoActivity;
 import com.example.free.mymvpdemo.ui.RecycleBinActivity;
+import com.example.free.mymvpdemo.ui.RecyclerViewActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
+import com.example.free.mymvpdemo.ui.StaggeredGridLayoutActivity;
+import com.example.free.mymvpdemo.ui.SwipeRecyclerViewActivity;
 import com.example.free.mymvpdemo.ui.TextViewActivity;
 import com.example.free.mymvpdemo.ui.TextWatcherActivity;
 import com.example.free.mymvpdemo.ui.TimeActivity;
@@ -161,6 +167,30 @@ public class Nav {
 
     public static void toMultipleItemUseActivity(Activity activity) {
         activity.startActivity(new Intent(activity, MultipleItemUseActivity.class));
+    }
+
+    public static void toMyLayoutActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, MyLayoutActivity.class));
+    }
+
+    public static void toPicassoActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, PicassoActivity.class));
+    }
+
+    public static void toRecyclerViewActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, RecyclerViewActivity.class));
+    }
+
+    public static void toSwipeRecyclerViewActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, SwipeRecyclerViewActivity.class));
+    }
+
+    public static void toStaggeredGridLayoutActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, StaggeredGridLayoutActivity.class));
+    }
+
+    public static void toHandlerActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, HandlerActivity.class));
     }
 
 }

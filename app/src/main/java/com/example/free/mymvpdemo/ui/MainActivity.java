@@ -1,69 +1,19 @@
 package com.example.free.mymvpdemo.ui;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Button;
-
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 import com.example.free.mymvpdemo.manager.Nav;
+import com.example.free.mymvpdemo.util.ULog;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushConfig;
 import com.tencent.android.tpush.XGPushManager;
 import com.tencent.android.tpush.common.Constants;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
-
-    @BindView(R.id.button_enter_layout)
-    Button buttonEnterLayout;
-    @BindView(R.id.button_picasso)
-    Button buttonPicasso;
-    @BindView(R.id.button_recycler)
-    Button buttonRecycler;
-    @BindView(R.id.button_waterfall)
-    Button buttonWaterfall;
-    @BindView(R.id.enter_handler)
-    Button enterHandler;
-    @BindView(R.id.serviceControl)
-    Button serviceControl;
-    @BindView(R.id.aidl_control)
-    Button aidlControl;
-    @BindView(R.id.jni_control)
-    Button jniControl;
-    @BindView(R.id.eventBus)
-    Button eventBus;
-    @BindView(R.id.nine_patch)
-    Button ninePatch;
-    @BindView(R.id.swipe_recycler)
-    Button swipeRecycler;
-    @BindView(R.id.time_util)
-    Button timeUtil;
-    @BindView(R.id.light_control)
-    Button lightControl;
-    @BindView(R.id.checkbox)
-    Button checkbox;
-    @BindView(R.id.recycle_bin)
-    Button recycleBin;
-    @BindView(R.id.checkbox_delete)
-    Button checkboxDelete;
-    @BindView(R.id.user_dialog)
-    Button userDialog;
-    @BindView(R.id.immersion_jump)
-    Button immersionJump;
-    @BindView(R.id.text_watcher)
-    Button textWatcher;
-    @BindView(R.id.load_glide)
-    Button loadGlide;
-    @BindView(R.id.change_fragment)
-    Button changeFragment;
 
     @Override
     protected int getLayoutId() {
@@ -72,7 +22,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        LogUtils.e("myDream :" + ActivityUtils.getTopActivity());
     }
 
     @Override
@@ -82,58 +32,55 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        XGPushManager.registerPush(getApplicationContext(),
-                new XGIOperateCallback() {
-                    @Override
-                    public void onSuccess(Object data, int flag) {
-                        Log.w(Constants.LogTag, "+++ register push sucess. token:" + data + "flag" + flag);
-//                        m.obj = "+++ register push sucess. token:" + data;
-//                        m.sendToTarget();
-                    }
+        XGPushManager.registerPush(getApplicationContext(), new XGIOperateCallback() {
+            @Override
+            public void onSuccess(Object data, int flag) {
+                ULog.w(Constants.LogTag, "+++ register push sucess. token:" + data + "flag" + flag);
+            }
 
-                    @Override
-                    public void onFail(Object data, int errCode, String msg) {
-                        Log.w(Constants.LogTag,
-                                "+++ register push fail. token:" + data
-                                        + ", errCode:" + errCode + ",msg:"
-                                        + msg);
-//                        m.obj = "+++ register push fail. token:" + data
-//                                + ", errCode:" + errCode + ",msg:" + msg;
-//                        m.sendToTarget();
-                    }
-                });
+            @Override
+            public void onFail(Object data, int errCode, String msg) {
+                ULog.w(Constants.LogTag,
+                        "+++ register push fail. token:" + data + ", errCode:" + errCode + ",msg:" + msg);
+            }
+        });
         // 获取token
         XGPushConfig.getToken(this);
     }
 
+    @Override
+    public boolean showTitleBar() {
+        return false;
+    }
+
     @OnClick(R.id.button_enter_layout)
     public void enterLayout() {
-        startActivity(new Intent(MainActivity.this, MyLayoutActivity.class));
+        Nav.toMyLayoutActivity(this);
     }
 
     @OnClick(R.id.button_picasso)
     public void enterPicasso() {
-        startActivity(new Intent(MainActivity.this, PicassoActivity.class));
+        Nav.toPicassoActivity(this);
     }
 
     @OnClick(R.id.button_recycler)
     public void buttonRecyclerView() {
-        startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+        Nav.toRecyclerViewActivity(this);
     }
 
     @OnClick(R.id.swipe_recycler)
-    public void swipenRecyclerView() {
-        startActivity(new Intent(MainActivity.this, SwipeRecyclerViewActivity.class));
+    public void swipeRecyclerView() {
+        Nav.toSwipeRecyclerViewActivity(this);
     }
 
     @OnClick(R.id.button_waterfall)
     public void waterFall() {
-        startActivity(new Intent(MainActivity.this, StaggeredGridLayoutActivity.class));
+        Nav.toStaggeredGridLayoutActivity(this);
     }
 
     @OnClick(R.id.enter_handler)
     public void handlerControl() {
-        startActivity(new Intent(MainActivity.this, HandlerActivity.class));
+        Nav.toHandlerActivity(this);
     }
 
     @OnClick(R.id.serviceControl)
@@ -224,20 +171,6 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.multiple_item)
     public void toMultipleItem() {
         Nav.toMultipleItemUseActivity(this);
-    }
-
-
-    @Override
-    public boolean showTitleBar() {
-        return false;
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
-
-        LogUtils.e("hahhaha:" + ActivityUtils.getTopActivity());
     }
 
 }
