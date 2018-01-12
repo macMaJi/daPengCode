@@ -20,6 +20,7 @@ import com.example.free.mymvpdemo.ui.HandlerUseActivity;
 import com.example.free.mymvpdemo.ui.ImmersionActivity;
 import com.example.free.mymvpdemo.ui.JNIActivity;
 import com.example.free.mymvpdemo.ui.LightControlActivity;
+import com.example.free.mymvpdemo.ui.MultipleItemUseActivity;
 import com.example.free.mymvpdemo.ui.My9PatchActivity;
 import com.example.free.mymvpdemo.ui.OkHttp3Activity;
 import com.example.free.mymvpdemo.ui.RecycleBinActivity;
@@ -156,6 +157,10 @@ public class Nav {
 
     public static void toTextViewActivity(Activity activity) {
         activity.startActivity(new Intent(activity, TextViewActivity.class));
+    }
+
+    public static void toMultipleItemUseActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, MultipleItemUseActivity.class));
     }
 
 }

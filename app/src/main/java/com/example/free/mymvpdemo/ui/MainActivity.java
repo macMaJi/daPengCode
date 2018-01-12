@@ -221,6 +221,11 @@ public class MainActivity extends BaseActivity {
         Nav.toTextViewActivity(this);
     }
 
+    @OnClick(R.id.multiple_item)
+    public void toMultipleItem() {
+        Nav.toMultipleItemUseActivity(this);
+    }
+
 
     @Override
     public boolean showTitleBar() {
