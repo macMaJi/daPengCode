@@ -24,7 +24,7 @@ public class MultipleItemUseActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        setTitle("MultipleItem Use");
+        setTitle("多种布局的使用方式");
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
         final List<MultipleItem> data = getMultipleItemData();
         final MultipleItemQuickAdapter multipleItemAdapter = new MultipleItemQuickAdapter(this, data);
@@ -47,8 +47,8 @@ public class MultipleItemUseActivity extends BaseActivity {
     public static List<MultipleItem> getMultipleItemData() {
         List<MultipleItem> list = new ArrayList<>();
         for (int i = 0; i <= 4; i++) {
-            list.add(new MultipleItem(MultipleItem.IMG, MultipleItem.IMG_SPAN_SIZE));
             list.add(new MultipleItem(MultipleItem.TEXT, MultipleItem.TEXT_SPAN_SIZE, "这是理想"));
+            list.add(new MultipleItem(MultipleItem.IMG, MultipleItem.IMG_SPAN_SIZE));
             list.add(new MultipleItem(MultipleItem.IMG_TEXT, MultipleItem.IMG_TEXT_SPAN_SIZE));
             list.add(new MultipleItem(MultipleItem.IMG_TEXT, MultipleItem.IMG_TEXT_SPAN_SIZE_MIN));
             list.add(new MultipleItem(MultipleItem.IMG_TEXT, MultipleItem.IMG_TEXT_SPAN_SIZE_MIN));

@@ -8,6 +8,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
+        <Button
+            android:id="@+id/multiple_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="multipleItem的使用" />
+
         <Button
             android:id="@+id/button_enter_layout"
             android:layout_width="match_parent"
@@ -135,11 +142,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView的使用" />
-        <Button
-            android:id="@+id/multiple_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="multipleItem的使用" />
 
     </LinearLayout>
 
