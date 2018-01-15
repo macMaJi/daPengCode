@@ -7,9 +7,10 @@ import com.chad.library.adapter.base.entity.MultiItemEntity;
  */
 public class MultipleItem implements MultiItemEntity {
 
-    public static final int TEXT = 1;
-    public static final int IMG = 2;
-    public static final int IMG_TEXT = 3;
+    public static final int ONE_TEXT = 1;
+    public static final int ONE_IMAGE = 2;
+    public static final int TWO_IMAGE = 3;
+    public static final int THREE_IMAGE = 4;
 
     public static final int TEXT_SPAN_SIZE = 3;
     public static final int IMG_SPAN_SIZE = 1;

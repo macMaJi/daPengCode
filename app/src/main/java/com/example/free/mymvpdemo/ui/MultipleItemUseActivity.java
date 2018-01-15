@@ -47,11 +47,10 @@ public class MultipleItemUseActivity extends BaseActivity {
     public static List<MultipleItem> getMultipleItemData() {
         List<MultipleItem> list = new ArrayList<>();
         for (int i = 0; i <= 4; i++) {
-            list.add(new MultipleItem(MultipleItem.TEXT, MultipleItem.TEXT_SPAN_SIZE, "这是理想"));
-            list.add(new MultipleItem(MultipleItem.IMG, MultipleItem.IMG_SPAN_SIZE));
-            list.add(new MultipleItem(MultipleItem.IMG_TEXT, MultipleItem.IMG_TEXT_SPAN_SIZE));
-            list.add(new MultipleItem(MultipleItem.IMG_TEXT, MultipleItem.IMG_TEXT_SPAN_SIZE_MIN));
-            list.add(new MultipleItem(MultipleItem.IMG_TEXT, MultipleItem.IMG_TEXT_SPAN_SIZE_MIN));
+            list.add(new MultipleItem(MultipleItem.ONE_TEXT, MultipleItem.IMG_TEXT_SPAN_SIZE, "这是理想"));
+            list.add(new MultipleItem(MultipleItem.ONE_IMAGE, MultipleItem.IMG_TEXT_SPAN_SIZE, "这是理想"));
+            list.add(new MultipleItem(MultipleItem.TWO_IMAGE, MultipleItem.IMG_TEXT_SPAN_SIZE));
+            list.add(new MultipleItem(MultipleItem.THREE_IMAGE, MultipleItem.IMG_TEXT_SPAN_SIZE, "这是第三条数据"));
         }
 
         return list;
