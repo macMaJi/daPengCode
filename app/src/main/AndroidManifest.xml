@@ -95,6 +95,24 @@
         <activity android:name=".ui.TextViewActivity" />
         <activity android:name=".ui.MultipleItemUseActivity" />
 
+        <receiver
+            android:name=".receiver.MessageReceiver"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace" />
+
+        <activity android:name=".ui.TabLayoutActivity"></activity>
     </application>
 
 </manifest>

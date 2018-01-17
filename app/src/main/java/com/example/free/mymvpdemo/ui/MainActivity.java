@@ -173,4 +173,9 @@ public class MainActivity extends BaseActivity {
         Nav.toMultipleItemUseActivity(this);
     }
 
+    @OnClick(R.id.button_tab_layout)
+    public void toTabLayout() {
+        Nav.toTabLayoutActivity(this);
+    }
+
 }

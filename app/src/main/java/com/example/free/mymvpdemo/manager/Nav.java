@@ -33,6 +33,7 @@ import com.example.free.mymvpdemo.ui.ServiceActivity2;
 import com.example.free.mymvpdemo.ui.StaggeredGridLayoutActivity;
 import com.example.free.mymvpdemo.ui.SwipeRecyclerViewActivity;
 import com.example.free.mymvpdemo.ui.TextViewActivity;
+import com.example.free.mymvpdemo.ui.TabLayoutActivity;
 import com.example.free.mymvpdemo.ui.TextWatcherActivity;
 import com.example.free.mymvpdemo.ui.TimeActivity;
 import com.example.free.mymvpdemo.ui.UserDialogActivity;
@@ -191,6 +192,10 @@ public class Nav {
 
     public static void toHandlerActivity(Activity activity) {
         activity.startActivity(new Intent(activity, HandlerActivity.class));
+    }
+
+    public static void toTabLayoutActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, TabLayoutActivity.class));
     }
 
 }

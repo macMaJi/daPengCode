@@ -8,12 +8,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/button_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进入tabLayout" />
 
         <Button
             android:id="@+id/multiple_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="multipleItem的使用" />
+
+
 
         <Button
             android:id="@+id/button_enter_layout"
